@@ -1,0 +1,13 @@
+Package: libxl
+Priority: extra
+Section: libs
+Maintainer: Marcelo Almeida <marcelo.almeida@jumia.com>
+Architecture: amd64
+Version: 3.8.2-1
+Provides: libxl
+Description: LibXL is a library that can read and write Excel files.
+  It doesn't require Microsoft Excel and .NET framework, combines an easy to use and powerful features. Library can be used to
+   * Generate a new spreadsheet from scratch
+   * Extract data from an existing spreadsheet
+   * Edit an existing spreadsheet
+  LibXL can help your applications in exporting and extracting data to/from Excel files with minimum effort. Also it can be used as report engine. Library can be used in C, C++, C#, Delphi, Fortran and other languages. Supports Excel 97-2003 binary formats (xls) and Excel 2007-2016 xml formats (xlsx/xlsm). Supports Unicode and 64-bit platforms. There are a wrapper for .NET developers and separate Linux, Mac and iOS editions.

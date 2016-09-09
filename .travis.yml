@@ -1,0 +1,26 @@
+language: bash
+services: docker
+
+env:
+  - VERSION=latest
+
+before_script:
+  - env | sort
+  - image="marceloalmeida/libxl-builddeb:${VERSION}"
+
+script:
+  - docker build -t "$image" .
+  - docker images
+  - docker run -it --rm -v $(pwd)/pkg:/pkg $image bash -c "cp /root/libxl*.deb /pkg; chmod 777 /pkg -R" 
+  - deb_package=$(ls $(pwd)/pkg)
+  - ls -lh $(pwd)/pkg/${deb_package}
+
+deploy:
+  provider: releases
+  api_key: "${GH_TOKEN}"
+  file: "$(pwd)/pkg/${deb_package}"
+  skip_cleanup: true
+  on:
+    tags: true
+
+# vim:set et ts=2 sw=2:

@@ -1,6 +1,6 @@
 # Buildtask for LibXL
 
-[![Build Status](https://travis-ci.org/marcelosousaalmeida/libxl-builddeb.svg?branch=master)](https://travis-ci.org/marcelosousaalmeida/libxl-builddeb)
+[![Build Status](https://travis-ci.org/marceloalmeida/libxl-builddeb.svg?branch=master)](https://travis-ci.org/marceloalmeida/libxl-builddeb)
 
 Task to build Debian packages LibXL.
 
